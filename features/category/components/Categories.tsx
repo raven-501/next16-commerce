@@ -24,3 +24,9 @@ export default async function Categories() {
     );
   });
 }
+
+export function CategoriesSkeleton() {
+  return Array.from({ length: 5 }).map((_, i) => {
+    return <div key={i} className="skeleton-animation h-5 w-20 rounded-xs" />;
+  });
+}
