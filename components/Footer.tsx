@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from 'next/link';
-import { Suspense } from 'react';
-import Categories, { CategoriesSkeleton } from '@/features/category/components/Categories';
+import Categories from '@/features/category/components/Categories';
 import ShowMore from './ui/ShowMore';
 
 export default function Footer() {
@@ -9,9 +8,7 @@ export default function Footer() {
     <footer className="bg-white dark:bg-black">
       <div className="mx-auto max-w-6xl px-4 py-8 sm:px-10">
         <ShowMore className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5">
-          <Suspense fallback={<CategoriesSkeleton />}>
-            <Categories />
-          </Suspense>
+          <Categories />
         </ShowMore>
         <div className="border-divider dark:border-divider-dark my-6 border-b" />
         <div className="text-gray dark:text-gray text-center text-sm">
